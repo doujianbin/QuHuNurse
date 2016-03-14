@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  小趣护士版
+//
+//  Created by 窦建斌 on 16/2/16.
+//  Copyright © 2016年 窦建斌. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIColor+Util.h"
+#import "AFNManager.h"
+#import "LoginStorage.h"
+#import "APIConfig.h"
+//#import <SVProgressHUD/SVProgressHUD.h>
+#import "Toast+UIView.h"
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define NetError [self.view makeToast:@"网络不给力，请稍后再试" duration:1.0 position:@"center"]
+#define FailMessage [self.view makeToast:Message duration:1.0 position:@"center"]
+#define BeginActivity [self.view makeToastActivity]
+#define EndActivity [self.view hideToastActivity]
+
+#define COLOR(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
